@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: projet/app:v1
+      tag: library/app:v1
       pushRemote: true
       registry: 172.22.101.111:30003
 timeout: 60

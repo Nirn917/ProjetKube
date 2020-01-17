@@ -4,7 +4,7 @@ stages:
   - runScriptConfig:
       image: docker:latest
       shellScript: |-
-        docker login --username=adyouyou --password=Jesuisdu91700! 172.22.101.111:30003
+        docker login --username=adyouyou --password=Jesuisdu91700! harbor.local:30003
         docker build -t library/app:v1 -f ./Dockerfile .
         docker push library/app:v1
 timeout: 60

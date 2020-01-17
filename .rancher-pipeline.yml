@@ -5,7 +5,6 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: Projet/app:v1
-      pushRemote: true
       registry: https://172.22.101.111:30003/
 timeout: 60
 notification: {}

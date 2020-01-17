@@ -1,8 +1,11 @@
 stages:
 - name: Build
   steps:
-  - runScriptConfig:
-      image: docker:latest
-      shellScript: ping core.harbor.local
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: library/app:v1
+      pushRemote: true
+      registry: core.harbor.local
 timeout: 60
 notification: {}

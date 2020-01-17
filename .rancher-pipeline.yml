@@ -6,6 +6,6 @@ stages:
       buildContext: .
       tag: library/app:v1
       pushRemote: true
-      registry: core.harbor.local
+      registry: harbor.local:30003
 timeout: 60
 notification: {}

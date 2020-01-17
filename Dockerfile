@@ -9,7 +9,6 @@ RUN go install -v ./...
 #final stage
 FROM alpine:latest
 RUN apk --no-cache add ca-certificates
-COPY --from=builder /go/bin/app /app
 ENTRYPOINT ./app
 LABEL Name=quickstart Version=0.0.1
 EXPOSE 3000

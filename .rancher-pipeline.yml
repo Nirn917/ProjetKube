@@ -3,9 +3,6 @@ stages:
   steps:
   - runScriptConfig:
       image: docker:latest
-      shellScript: |-
-        docker login --username=adyouyou --password=Jesuisdu91700! harbor.local:30003
-        docker build -t library/app:v1 -f ./Dockerfile .
-        docker push library/app:v1
+      shellScript: ping core.harbor.local
 timeout: 60
 notification: {}
